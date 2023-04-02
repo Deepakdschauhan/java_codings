@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const a = ['deepak','prince','chintu']; //initialization of an array
+        document.write(a[1]); // it will print prince
+        document.write("<br><br>");
+        document.write(a.length); // it will print number of items
+        document.write("<br><br>");
+        a.push('tanisha'); //push - add in the end
+        document.write(a[3]); // it will print tanisha
+        document.write("<br><br>");
+        a.unshift('renu'); //unshif- add in the begin
+        document.write(a[0]); //it will print renu
+        document.write("<br><br>");
+        a.pop('tanisha'); // pop - remove from end
+        document.write(a);
+        document.write("<br><br>");
+        // shift - remove from the begin
+        const b =[1,2,3,4,5];
+        const c = a.concat(b); // join arrays
+        document.write(c);
+        document.write("<br><br>");
+        document.write( c.lastIndexOf(4));
+        const y =c.includes('chintu', 4); // check values , gives true or false
+        document.write('<br>');
+        document.write(y);
+        document.write('<br>');
+        document.write(c.sort());
+        document.write('<br>');
+        document.write(c.reverse());
+        document.write('<br>');
+        document.write(c.toString());
+        document.write('<br>');
+        
+
+    </script>
+    
+</body>
+</html>

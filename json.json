@@ -1,0 +1,13 @@
+{
+    "name": "deepak chauhan", 
+    "qualification": "diploma",
+    "isboy":true,
+    "licence": null,
+    "age": 22.6,
+    "skils": ["html","css","js","python"],
+    "obj":{
+        "name": "elephant",
+        "age":"two"
+    }
+    
+}

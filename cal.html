@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body style="text-align: center; background-color:rgb(100, 221, 237);">
+    <h2>calculator .. made by deepak chauhan</h2>
+    <form onsubmit="oper()">
+        n1 <input style="width: 150px; text-align: center; height: 30px; border-radius: 30px;" type="number" id="n1"><br><br>
+        n2 <input style="width: 150px;text-align: center; height: 30px; border-radius: 30px;" type="number" id="n2"><br><br>
+        <input style="width: 90px; height: 50px; border-radius: 30px;" type="submit" value="submit">
+    </form>
+    <div>
+        <script>
+            function oper(){
+                const n1 = document.getElementById("n1").value;
+                const n3 = Number(n1);
+                const n2 = document.getElementById("n2").value;
+                const n4 = Number(n2);  
+                document.write("first number is : " + n3 + "<br>");
+                document.write("second number is : " + n4 + "<br><br>");
+                document.writeln("addition is : " + (n3+n4) + "<br><br>");
+                document.writeln("subtraction is : " + (n3-n4 + "<br><br>"));
+                document.writeln("multiplication  is : " + (n3*n4)+ "<br><br>");
+                document.writeln("division is : " + (n3/n4) + "<br><br>");
+                document.writeln("reminder after division  is : " + (n3%n4) + "<br><br>");
+            }
+        </script>
+    </div>
+    
+</body>
+</html>
