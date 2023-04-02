@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>enter in array</title>
+</head>
+<body>
+    <script>
+        function enter(){
+            let data = [1,2];
+            for(i=0; i<data.length; ++i){
+               
+                let f1 = document.getElementById("f1").value;
+                data.unshift(f1);
+                document.write(`${data[i]} <br>`);
+            }
+            
+        }
+    </script>
+    <input type="number" placeholder="enter data" id="f1">
+    <button onclick="enter()">submit data</button>
+</body>
+</html>

@@ -1,0 +1,131 @@
+<html>
+    <head>
+        <title>dairy_calculator</title>
+        <style>
+            body{
+            background-color: darkcyan;
+            text-align: left;
+            height: 100%;
+            width: auto;
+        }
+        button{position: absolute;
+            top: 2.6in;
+            padding: .3cm;
+            width: 4cm;
+            background-color: darkgrey;
+            color: black;
+            text-align: center;
+            border-radius: 15px;
+        }
+        input{
+            height: 1cm;
+            width: 6cm;
+            text-align: center;
+            border-radius: 15px;
+        }
+        span{
+            size: 1cm;
+            background-color: rgb(11, 154, 121);
+            color: black;
+        }
+        .data{
+            position: fixed;
+           left: 0px;
+            top: 3.2in;
+            height: 6cm;
+            width: auto;
+        }
+        h4{
+            float: left;
+            padding-left: 30px;
+        }
+        h5{
+            position: fixed;
+            top: 5in;
+            left: 3in;
+        }
+        .rate{
+            position: fixed;
+            top: 3.5in;
+            left: 1in;
+        }
+
+        </style>
+    </head>
+    
+    <body>
+        <h1> milk calculator ..</h1>
+        Milk(दूध का वजन) : <input id="milk" type="number" placeholder="enter milk in KG" required><br><br>
+        number(नंबर) : <input id="num" type="number" placeholder="enter numbers of sample" required><br><br>
+        rate(मूल्य) : <input type="number" placeholder="enter rate" id="rate"><br>
+        <button onclick="count()">calculate</button><br><br>
+        <div class="data">
+        <h4>MILK(दूध का वजन) : <span id="m"></span></h4>
+        <h4>NUMBERS(नंबर) :<span id="n"></span></h4>
+       <h4> Fat Add(बढ़ा हुआ दूध) :<span id="fatadd"></span></h4>
+       <h4> Fat Loss(घटा हुआ दूध) :<span id="fatloss"></span></h4>
+        </div>
+        <div class="rate">
+           
+            <br>
+            <h3>Total(कुल) : <span id="total"></span></h3>
+            <h4> Rs(रुपये बनते हैं) :<span id="Rs"></span></h4>
+        </div>
+        <br><br>
+        <h5>created by : Mr. deepak chauhan..</h5>
+    
+ 
+       
+        <script>
+            function count(){
+                const a =parseInt(document.getElementById("milk").value);
+                const b =parseInt(document.getElementById("num").value);
+                const c = (b-60);
+                if(c>0){
+                    const d = a*c*16;
+                    const e = d/1000;
+                    document.getElementById("fatadd").innerHTML = e;
+                    document.getElementById("fatloss").innerHTML = 0;
+                    const f = a+e;
+                    document.getElementById("total").innerHTML = f;
+                    const y =parseInt(document.getElementById("rate").value);
+                    const x = f*y;
+                    document.getElementById("Rs").innerHTML = x;
+                   
+                    
+
+                }
+                else if(c<0){
+                    const d = a*c*16;
+                    const e = d/1000;
+                    document.getElementById("fatloss").innerHTML = e;
+                    document.getElementById("fatadd").innerHTML = 0;
+                    const f = a+e;
+                    document.getElementById("total").innerHTML = f;
+                    const y =parseInt(document.getElementById("rate").value);
+                    const x = f*y;
+                    document.getElementById("Rs").innerHTML = x;
+
+                }
+                else{
+                    const e = 0;
+                    document.getElementById("fatadd").innerHTML = e;
+                    document.getElementById("fatloss").innerHTML = e;
+                    const f = a+e;
+                    document.getElementById("total").innerHTML = f;
+                    const y =parseInt(document.getElementById("rate").value);
+                    const x = f*y;
+                    document.getElementById("Rs").innerHTML = x;
+
+
+                }
+                
+                document.getElementById("m").innerHTML = a;
+                document.getElementById("n").innerHTML = b;
+                
+            }
+           
+        </script>
+        
+    </body>
+</html>

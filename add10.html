@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>add 10</title>
+    <style>
+        body{
+            text-align: center;
+            background-color: aqua;
+        }
+
+    </style>
+    <script>
+        function res(){
+            const a  =parseFloat( document.getElementById("1").value);
+            const b  = parseFloat( document.getElementById("2").value);
+            const c  = parseFloat( document.getElementById("3").value);
+            const d  = parseFloat( document.getElementById("4").value);
+            const e  =parseFloat( document.getElementById("5").value);
+            const f  = parseFloat( document.getElementById("6").value);
+            const g  = parseFloat( document.getElementById("7").value);
+            const h  = parseFloat( document.getElementById("8").value);
+            const i  = parseFloat( document.getElementById("9").value);
+            const j  = parseFloat( document.getElementById("10").value);
+            const  k = a+b+c+d+e+f+g+h+i+j;
+            document.getElementById("re").innerHTML = k;        
+        }
+    </script>
+</head>
+<body>
+    <div class="ten">
+    <input type="text"  id="1"><br><br>
+    <input type="text"  id="2"><br><br>
+    <input type="text"  id="3"><br><br>
+    <input type="text"  id="4"><br><br>
+    <input type="text"  id="5"><br><br>
+    <input type="text"  id="6"><br><br>
+    <input type="text"  id="7"><br><br>
+    <input type="text"  id="8"><br><br>
+    <input type="text"  id="9"><br><br>
+    <input type="text"  id="10"><br><br>
+    <button onclick="res()"> add all</button>
+    </div>
+    <p> total :<span id="re"></span></p>
+    
+</body>
+</html>
